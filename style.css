@@ -75,6 +75,8 @@ section {
     justify-content: space-between;
     gap: 40px;
     text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .hero-texto {
@@ -92,7 +94,37 @@ section {
     border-radius: 50%; /* Deixa a imagem redonda */
     border: 4px solid #2563eb; 
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.hero-imagem img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 25px -5px rgba(37,99,235,0.3);
+}
+
+/* Estilizando para os links de redes sociais */
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.redes-sociais img {
+    width: 32px;
+    height: 32px;
+}
+
+.redes-sociais a:hover {
+    transform: scale(1.15);
+    opacity: 0.85;
+}
+
+
 
 /*Responsividade*/
 @media (max-width: 768px) {
@@ -105,4 +137,126 @@ section {
         width: 160px;
         height: 160px;
     }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+}
+
+/* Estilo total para os botões do carrossel*/
+.meu-botao-carrossel {
+    width: 45px;
+    height: 45px;
+    background-color: #1f2937 !important; 
+    border-radius: 50% !important;        
+    border: none !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    opacity: 0.9 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Cor e tamanho da setinha*/
+.meu-botao-carrossel .seta-icone {
+    color: #ffffff !important;            
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse por cima */
+.meu-botao-carrossel:hover {
+    background-color: #a5a5a5 !important; 
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1 !important;
+}
+
+/* =========================================================================================================================*/
+
+
+/*Carrossel de certificados*/
+.secao-certificados {
+    background-color: #ffffff;
+    padding: 4rem 5%;
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: contain;
+    background-color: #1f2937;
+}
+
+
+
+
+
+
+
+
+/* =========================================================================================================================*/
+
+/* Seção de Contato */
+#contato {
+    background: #ffffff;
+    border-radius: 8px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+#form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-grupo label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-grupo input, 
+.input-grupo textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.input-grupo input:focus, 
+.input-grupo textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button[type="submit"] {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #15803d;
+}
+
+#form-status {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
