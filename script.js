@@ -76,7 +76,7 @@ formContato.addEventListener('submit', function(e) {
     
     
     formStatus.style.color = '#16a34a';
-    formStatus.textContent = `Obrigado pela mensagem, ${nome}! (Em breve integraremos com um serviço de envio real como Web3Forms).`;
+    formStatus.textContent = `Obrigado pela mensagem, ${nome}! (Em breve integraremos com um serviço de envio real)`;
 
    
     formContato.reset();
